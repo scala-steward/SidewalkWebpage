@@ -53,17 +53,23 @@
             <tr>
                 <th>Total Users <sup>*</sup></th>
                 <td>
-                    <span id="user-count-combined-all-all_time-no_task_constraint-any_quality2">—</span>
+                    <span id="user-count-combined-all-all_time-no_task_constraint-any_quality">—</span>
                     (<span id="user-count-combined-all-all_time-task_completed-any_quality">—</span>)
                 </td>
                 <td>
-                    <span id="user-count-combined-all-today-no_task_constraint-any_quality2">—</span>
+                    <span id="user-count-combined-all-today-no_task_constraint-any_quality">—</span>
                     (<span id="user-count-combined-all-today-task_completed-any_quality">—</span>)
                 </td>
                 <td>
                     <span id="user-count-combined-all-week-no_task_constraint-any_quality">—</span>
                     (<span id="user-count-combined-all-week-task_completed-any_quality">—</span>)
                 </td>
+            </tr>
+            <tr>
+                <th>High Quality Users</th>
+                <td id="user-count-combined-all-all_time-no_task_constraint-high_quality">—</td>
+                <td id="user-count-combined-all-today-no_task_constraint-high_quality">—</td>
+                <td id="user-count-combined-all-week-no_task_constraint-high_quality">—</td>
             </tr>
             <tr>
                 <th>Explore Users <sup>*</sup></th>
@@ -145,8 +151,8 @@
             </tr>
             <tr>
                 <th>Total Labels</th>
-                <td id="label-count-All-all_time2">—</td>
-                <td id="label-count-All-today2">—</td>
+                <td id="label-count-All-all_time">—</td>
+                <td id="label-count-All-today">—</td>
                 <td id="label-count-All-week">—</td>
             </tr>
             <tr style="font-size: 90%;"><td style="padding-left: 24px;">@Messages("curb.ramp")</td><td id="label-count-CurbRamp-all_time">—</td><td id="label-count-CurbRamp-today">—</td><td id="label-count-CurbRamp-week">—</td></tr>
@@ -160,7 +166,7 @@
             <tr style="font-size: 90%;"><td style="padding-left: 24px;">@Messages("occlusion")</td><td id="label-count-Occlusion-all_time">—</td><td id="label-count-Occlusion-today">—</td><td id="label-count-Occlusion-week">—</td></tr>
             <tr>
                 <th>Streets Explored</th>
-                <td id="explored-street-count-all-time2">—</td>
+                <td id="explored-street-count-all-time">—</td>
                 <td id="explored-street-count-today">—</td>
                 <td id="explored-street-count-week">—</td>
             </tr>
@@ -172,7 +178,7 @@
             </tr>
             <tr>
                 <th>Total Validations <sup>**</sup></th>
-                <td id="val-count-All-all_time2">—</td>
+                <td id="val-count-All-all_time">—</td>
                 <td id="val-count-All-today">—</td>
                 <td id="val-count-All-week">—</td>
             </tr>
@@ -276,5 +282,6 @@
             const accessToken = '@commonData.imageryAccessToken';
             await initOverview('@commonData.mapboxApiKey', viewerType, accessToken, "@user.username");
         });
+        updateTimestamps("@messages.lang.code");
     </script>
 }

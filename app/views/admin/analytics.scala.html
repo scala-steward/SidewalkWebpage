@@ -44,6 +44,14 @@
         <h2 id="section-engagement">User Engagement</h2>
 
         <h3 id="section-severity">Severity Distributions</h3>
+        <p style="font-size: 0.85rem;">
+            Curb Ramp — mean: <strong id="curb-ramp-mean">—</strong>, std: <strong id="curb-ramp-std">—</strong> &nbsp;|&nbsp;
+            No Curb Ramp — mean: <strong id="missing-ramp-mean">—</strong>, std: <strong id="missing-ramp-std">—</strong> &nbsp;|&nbsp;
+            Obstacle — mean: <strong id="obstacle-mean">—</strong>, std: <strong id="obstacle-std">—</strong> &nbsp;|&nbsp;
+            Surface Problem — mean: <strong id="surface-mean">—</strong>, std: <strong id="surface-std">—</strong> &nbsp;|&nbsp;
+            Crosswalk — mean: <strong id="crosswalk-mean">—</strong>, std: <strong id="crosswalk-std">—</strong> &nbsp;|&nbsp;
+            All — mean: <strong id="labels-mean">—</strong>, std: <strong id="labels-std">—</strong>
+        </p>
         <div id="severity-histograms"></div>
         <div id="severity-histograms2"></div>
 
@@ -123,6 +131,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@@5/build/vega-lite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@@6/build/vega-embed.min.js"></script>
 
+    <link href='@assets.path("stylesheets/choropleth.css")' rel="stylesheet"/>
     <link href='@assets.path("stylesheets/admin.css")' rel="stylesheet"/>
 
     <script>
